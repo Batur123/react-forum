@@ -1,9 +1,9 @@
 import React from 'react';
 import './App.css';
+import {BrowserRouter, Route, Routes} from "react-router-dom";
+import {LoadHeader} from "./header";
 import {GithubRepos} from "./github_api";
 import {StackOverflowQuestions} from "./stackoverflow_api";
-import {LoadHeader} from "./header";
-import {BrowserRouter, Route, Routes} from "react-router-dom";
 
 function App() {
   return (
