@@ -18,16 +18,22 @@ export const StackOverflowQuestions = () => {
         });
     },[]);
 
+    let header = LoadHeader();
+
     if(posts === null) {
         return(
-            <p>
-                Loading repos.
-            </p>
+            <>
+                <div>
+                    {header}
+                </div>
+
+                <div id="content">
+                    Loading Stack Overflow Questions, please wait.
+                </div>
+            </>
         )
     }
 
-    console.log(posts.items);
-    let header = LoadHeader();
     return(
         <>
             <div>

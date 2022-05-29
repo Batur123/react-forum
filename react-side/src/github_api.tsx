@@ -18,15 +18,22 @@ export const GithubRepos = () => {
         });
     },[]);
 
+    let header = LoadHeader();
+
     if(posts === null) {
         return(
-           <p>
-               Loading repos.
-           </p>
+            <>
+                <div>
+                    {header}
+                </div>
+
+                <div id="content">
+                    Loading Github Repositories, please wait.
+                </div>
+            </>
         )
     }
 
-    let header = LoadHeader();
     return(
         <>
             <div>
